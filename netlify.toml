@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"  # Change this to your build command if needed
+  functions = "functions"    # Directory where Netlify functions are stored
+  publish = "public"         # Directory to deploy (your built files)
+[build.environment]
+  PHP_VERSION = "7.4"  # Adjust this to your PHP version if needed  
