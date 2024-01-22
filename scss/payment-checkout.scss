@@ -1,0 +1,62 @@
+@import "variables";
+
+.payment-container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+
+    .become-A-cheif-container {
+        flex: 1 1 0px;
+        background: transparent url('img/Rectangle 17468.png') 0% 0% no-repeat padding-box;
+        box-shadow: 0px 4px 8px #00000052;
+        border-radius: 15px;
+        opacity: 1;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .title {
+            text-align: left;
+            font: normal normal bold 32px/38px $font-family;
+            letter-spacing: 0px;
+            color: #001746;
+            text-transform: uppercase;
+        }
+
+        .data {
+            display: flex;
+            justify-content: space-between;
+            gap: 128px;
+
+            .label {
+                font: normal normal normal 18px/22px $font-family;
+                letter-spacing: 0px;
+                color: #001746;
+            }
+
+            .value {
+                font: normal normal bold 18px/22px $font-family;
+                letter-spacing: 0px;
+                color: #001746;
+            }
+        }
+
+        .amount-container {
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            background: transparent url('img/Rectangle 17468.png') 0% 0% no-repeat padding-box;
+            box-shadow: 0px 4px 8px #00000029;
+            border-radius: 15px;
+            gap: 32px;
+
+        }
+    }
+
+    .form {
+        flex: 1 1 0px;
+    }
+}

@@ -1,0 +1,306 @@
+.container-width-adj{
+    overflow: hidden !important;
+}
+@media screen and (max-width: 992px){
+    p {
+
+        font-family: "Poppins", Sans-serif !important;
+        font-size: 21px  !important;
+        line-height: 2  !important;
+        font-weight: 500 !important;
+    }
+    h4 {
+        font-family: "Poppins", Sans-serif !important;
+        font-size: 45px !important;
+        font-weight: 600 !important;
+        color: white !important;
+        line-height: 1 !important;
+    }
+    h2 {
+        color: #9C3DFD !important;
+        font-family: "Poppins", Sans-serif !important;
+        font-size: 38px !important;
+        font-weight: 600 !important;
+        line-height: 1.1 !important;
+    }
+    h5 {
+        font-family: "Poppins", Sans-serif !important;
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        color: #9C3DFD !important;
+    }
+    .accordion {
+        font-size: 22px !important;
+    }
+}
+/*section1 start*/
+.affiliated-bner-section {
+    border: 0px solid;
+    width: 100vw;
+    height: 50vh;
+    background: antiquewhite;
+}
+
+@media screen and (max-width: 992px){
+.affiliated-bner-section {
+    border: 0px solid;
+    width: 100vw;
+    height: 20vh;
+    background: antiquewhite;
+    overflow: hidden;
+}
+.tag-bner-sec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.tag-bner-sec>h2 {
+    color: white !important;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+    text-align: center !important;
+}
+}
+.bner-sec {
+    padding: 50px 150px 50px 150px;
+}
+.tag-bner-sec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-1 {
+    background-image: url(https://cheflick.code7labs.com/wp-content/uploads/2022/03/Group-9420@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tag-bner-sec>h2 {
+    color: white;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+    font-size: 46px;
+}
+
+/*SECTION2 START*/
+.affiliated-acs-section {
+    width: 100vw;
+    height: 80vh;
+    background: white;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 992px){
+
+.affiliated-acs-section {
+
+    width: 100vw;
+    height: 55vh;
+    background: white;
+    overflow: hidden;
+}
+
+}
+
+.acs-sec {
+    padding: 0px 80px 0px 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+@media screen and (max-width: 992px){
+.acs-sec {
+    padding: 50px 180px;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.cont-2 {
+    overflow: hidden;
+    height: auto !important;
+}
+}
+.tag-bcs-sec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cont-2 {
+    overflow: hidden;
+    height: 100%;
+}
+
+.tag-acs-sec>h2 {
+    color: #001746;
+    font-family: "Rozha One", Sans-serif;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1.2;
+}
+.tag-acs-sec>h5 {
+    color: #9C3DFD;
+    font-family: "Poly", Sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px;
+}
+.tag-acs-sec>p{
+    color: #7C7D7E;
+    font-family: "Poppins", Sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: none;
+    text-decoration: none;
+    line-height: 23px;
+    letter-spacing: 0.4px;
+    -webkit-text-stroke-color: #000;
+    stroke: #000;
+        text-align: justify;
+}
+.acs-readmore {
+    background-color: #732FC5;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 15px;
+    padding: 12px 24px;
+    color: #fff;
+    border: 0px;
+    margin: 30px 0px;
+}
+.acs-img-sec {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 992px){
+    .acs-img-sec {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.acs-img-cont{
+    display: contents;
+}
+/*section2 end*/
+
+
+
+
+/*section2 start*/
+.affiliated-sonl-section {
+    border: 0px solid;
+    width: 100vw;
+    height: 50vh;
+    background: antiquewhite;
+}
+
+@media screen and (max-width: 992px){
+.affiliated-sonl-section {
+    border: 0px solid;
+    width: 100vw;
+    height: 40vh;
+    background: antiquewhite;
+    overflow: hidden;
+}
+}
+.sonl-sec {
+    padding: 50px 150px 50px 150px;
+}
+.tag-sonl-sec {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-3 {
+    background-image: url(https://cheflick.code7labs.com/wp-content/uploads/2022/04/Group-9419@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tag-sonl-sec>h2 {
+    color: #001746;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+}
+.tag-sonl-sec>p{
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+    -webkit-text-stroke-color: #000;
+    stroke: #000;
+    text-align: center;
+}
+.sonl-readmore {
+    background-color: #732FC5;
+    border-radius: 50px 50px 50px 50px;
+    font-size: 15px;
+    padding: 12px 24px;
+    color: #fff;
+    border: 0px;
+    margin: 30px 0px;
+    width: 29%;
+}
+.email{
+    margin-left: -50px;
+    border-radius: 150px;
+    padding: 15px;
+    width: 45px;
+    height: 45px;
+    color: #9C3DFD;
+
+}
+.inpu-email{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 25px;
+    padding: 13px;
+    width: 70%;
+    border: none;
+    margin-bottom: 0px;
+    margin-right: 10px;
+}

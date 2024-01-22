@@ -1,0 +1,455 @@
+@import "variables";
+
+.hero {
+    width: 100%;
+    padding: 144px 104px;
+    background: url("../assets/images/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    // align-items: stretch;
+    gap: 144px;
+    justify-content: center;
+
+    .hero-container {
+        width: 100%;
+        max-width: 1280px;
+        display: flex;
+
+        .section-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            .sub-title {
+                text-align: left;
+                font: normal normal bold 40px/48px $font-family;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                opacity: 1;
+                margin-bottom: 16px;
+            }
+
+            .title {
+                text-align: left;
+                font: normal normal bold 74px/89px $font-family;
+                letter-spacing: 0px;
+                color: $main-color;
+                text-transform: uppercase;
+                opacity: 1;
+                margin-bottom: 32px;
+            }
+
+            .input-container {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                align-items: flex-start;
+                position: relative;
+                width: 100%;
+
+                label {
+                    text-align: left;
+                    font: normal normal normal 20px/24px $font-family;
+                    letter-spacing: 0px;
+                    color: #B6B7B7;
+                    opacity: 1;
+                }
+
+                .search-bar {
+                    width: 100%;
+                    position: relative;
+
+                    input {
+                        padding: 24px 32px;
+                        width: 100%;
+                        border-radius: 64px;
+                        text-align: left;
+                        font: normal normal normal 18px/22px $font-family;
+                        letter-spacing: 0px;
+                        color: #6d6d6d;
+                        opacity: 1;
+                        text-transform: capitalize;
+                        border: none;
+                        outline: none;
+
+                        &::placeholder {
+                            text-align: left;
+                            font: normal normal normal 18px/22px $font-family;
+                            letter-spacing: 0px;
+                            color: #B6B7B7;
+                            opacity: 1;
+                            text-transform: capitalize;
+                        }
+
+                        &:focus {
+
+                            outline: 1px solid $main-color;
+                        }
+                    }
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        position: absolute;
+                        right: 32px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                .ctas {
+                    display: flex;
+                    gap: 32px;
+                    justify-content: flex-start;
+
+                    .hero-btn {
+                        padding: 22px 70px;
+                        background-color: $main-color;
+                        border-radius: 44px;
+                        flex: 1;
+                        border: none;
+                        // font
+                        text-align: center;
+                        font: normal normal normal 18px/22px $font-family;
+                        letter-spacing: 0.36px;
+                        color: #FFFFFF;
+                        text-transform: uppercase;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .cities-container {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .cities {
+                    display: flex;
+                    gap: 32px;
+                    margin-top: 32px;
+
+                    .city {
+                        padding: 27px 40px;
+                        background: #FFFFFF 0% 0% no-repeat padding-box;
+                        box-shadow: 0px 3px 10px #00000029;
+                        border: 2px solid $main-color;
+                        border-radius: 12px;
+                        opacity: 1;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 24px;
+
+                        .name {
+                            text-align: center;
+                            font: normal normal bold 18px/22px $font-family;
+                            letter-spacing: 0.9px;
+                            color: #001746;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+
+                .dots {
+                    display: flex;
+                    gap: 16px;
+
+                    .dot {
+                        width: 16px;
+                        height: 16px;
+                        background-color: #E5CCFF;
+                    }
+                }
+
+            }
+        }
+
+        .section-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+.become-cooking-star-banner {
+    width: 100%;
+    background-image: url(../assets/images/cooking-banner.png);
+    // padding: 0px !important;
+}
+
+.processes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 32px;
+    max-width: 1280px;
+
+    .process-box {
+        flex: calc(25% - 32px);
+        // padding: 0px 24px 0px 24px;
+        height: 268px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 4px 8px #00000029;
+        border-radius: 36px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+
+        img {
+            height: 186px;
+        }
+
+        .process-name {
+            text-align: center;
+            font: normal normal bold 21px/28px "metropolis", sans-serif;
+            letter-spacing: 0px;
+            color: #001746;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+    }
+}
+
+.gallary-section {
+    background: linear-gradient(to bottom, #9C3DFD 25%, #FFFFFF 25%);
+    gap: 0px !important;
+
+    .title {
+        text-align: center;
+        font: normal normal bold 21px/25px "metropolis", sans-serif;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        opacity: 1;
+        margin-bottom: 24px;
+    }
+
+    .sub-title {
+        text-align: center;
+        font: normal normal bold 34px/41px $font-family;
+        letter-spacing: 0px;
+        color: #FFBB00;
+        text-transform: uppercase;
+        opacity: 1;
+        margin-bottom: 64px;
+    }
+
+    .gallary {
+        width: 100%;
+        max-width: 1280px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-rows: repeat(auto-fit, 1fr);
+        gap: 32px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.benefits-section {
+    // // max-width: 1280px;
+    // // display: flex;
+    // // justify-content: center;
+    // // border: 1px solid black;
+    // width: 100%;
+
+    .page-name {
+        text-align: center !important;
+    }
+
+    .heading {
+        text-align: center !important;
+    }
+
+    .benefits {
+        width: 100%;
+        max-width: 1280px;
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-rows: repeat(auto-fit, 1fr);
+        // justify-content: space-between;
+        gap: 56px;
+
+        .benefit {
+            padding: 56px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 4px 8px #00000029;
+            border-radius: 36px;
+            opacity: 1;
+
+            .name {
+                text-align: center;
+                font: normal normal bold 21px/28px $font-family;
+                letter-spacing: 0px;
+                color: #001746;
+                text-transform: uppercase;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 1280px) {
+    .hero {
+        padding: 40px 32px;
+        margin: 0 auto;
+
+        .hero-container {
+            .section-left {
+                width: 100%;
+            }
+
+            .section-right {
+                display: none;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .processes {
+        .process-box {
+            flex: calc(50% - 32px);
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        .hero-container {
+            .section-left {
+                .sub-title {
+                    font: normal normal bold 24px/32px $font-family;
+                    margin-bottom: 12px;
+                }
+
+                .title {
+                    font: normal normal bold 40px/55px $font-family;
+                    margin-bottom: 24px;
+                }
+
+                .input-container {
+                    gap: 16px;
+                    width: 100%;
+
+                    label {
+                        text-align: left;
+                        font: normal normal normal 14px/18px $font-family;
+                    }
+
+                    .search-bar {
+                        width: 100%;
+                        position: relative;
+
+                        input {
+                            padding: 16px 24px;
+                            border-radius: 48px;
+                            text-align: left;
+                            font: normal normal normal 12px/18px $font-family;
+
+                            &::placeholder {
+                                font: normal normal normal 12px/18px $font-family;
+                            }
+                        }
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            position: absolute;
+                            right: 24px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                    .ctas {
+                        flex-wrap: wrap;
+                        gap: 16px;
+
+                        .hero-btn {
+                            padding: 16px 40px;
+                            white-space: nowrap;
+                            font: normal normal normal 16px/20px $font-family;
+                        }
+                    }
+                }
+
+                .cities-container {
+                    gap: 16px;
+                    width: 100%;
+
+                    .cities {
+                        gap: 16px;
+                        margin-top: 24px;
+                        width: 100%;
+                        overflow: scroll;
+
+                        .city {
+                            padding: 14px 32px;
+                            gap: 16px;
+
+                            .name {
+                                font: normal normal bold 14px/18px $font-family;
+                            }
+                        }
+                    }
+
+
+                    .dots {
+                        display: flex;
+                        gap: 12px;
+
+                        .dot {
+                            width: 12px;
+                            height: 12px;
+                            background-color: #E5CCFF;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .processes {
+
+        .process-box {
+            flex: calc(100% - 32px);
+        }
+    }
+}

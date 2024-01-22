@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "metropolis";
+    src: url("../assets/fonts/Metropolis/Metropolis-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "metropolis";
+    src: url("../assets/fonts/Metropolis/Metropolis-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "metropolis";
+    src: url("../assets/fonts/Metropolis/Metropolis-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 104px 80px;
+    background-color: #1C0039;
+
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    margin: 0 -48px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1280px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.section .link {
+    text-align: left;
+    font-family: "metropolis";
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.section-title {
+    margin-top: 0px;
+    display: inline;
+    padding: 0;
+    margin-bottom: 24px;
+    text-align: left;
+    font-family: "metropolis", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+    letter-spacing: 0px;
+    color: #9C3DFD;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.information {
+    display: block;
+    text-align: left;
+    font-family: "metropolis", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    letter-spacing: 0px;
+    color: #D6D6D6;
+    opacity: 1;
+    max-width: 400px;
+}
+
+.download-app {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.download-app-heading {
+    text-align: left;
+    font: normal normal normal 36px/28px "metropolis", sans-serif;
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.apps-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* .apple {
+    margin-right: 24px;
+} */
+
+.contact {
+    display: flex;
+    gap: 16px;
+}
+
+.social-contacts {
+    display: flex;
+    gap: 16px;
+}
+
+.contact i {
+    font-size: 16px;
+    color: white;
+}
+
+.contact p {
+    font-size: 16px;
+    font-family: "metropolis";
+    color: white;
+}
+
+.social-contacts i {
+    font-size: 16px;
+    color: white;
+}
+
+footer .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    order: 10;
+    background-color: #0E001D;
+    padding: 16px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    font-family: "metropolis";
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media screen {
+    footer {
+        padding: 104px 32px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    footer {
+        padding: 80px 24px;
+    }
+
+    .foot-logo {
+        height: 40px;
+    }
+
+    .content {
+        gap: 24px;
+    }
+
+    .section {
+        gap: 16px;
+    }
+
+    .section-title {
+        margin-bottom: 8px;
+    }
+
+
+    .download-app {
+        gap: 16px;
+    }
+
+
+    .download-app-heading {
+        font-size: 16px;
+    }
+
+    .information {
+        font-size: 12px;
+    }
+
+    .apps-images {
+        gap: 16px;
+    }
+
+    .download-app img {
+        height: 40px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    .section .link {
+        font-size: 12px;
+    }
+
+    .contact p {
+        font-size: 12px;
+    }
+
+    .social-contacts i {
+        font-size: 12px;
+    }
+
+    .bottom {
+        font-size: 10px;
+    }
+}

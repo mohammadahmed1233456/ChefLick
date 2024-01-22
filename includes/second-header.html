@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="../assets/icons/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="../assets/icons/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="../assets/icons/fontawesome/css/solid.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/second-header.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+
+    <title>Header</title>
+</head>
+
+<body>
+    <header class="second-header">
+        <div class="bottom">
+            <div class="logo"><img src="../assets/images/logo.png" alt=""></div>
+            <div class="search-and-filters">
+                <div class="location-field">
+                    <input type="text" placeholder="" class="location form-input-wt-shadow">
+                    <i class="fas fa-location location-icon"></i>
+                </div>
+                <select name="delivery" id="" class="form-select-2 form-input-wt-shadow order-type">
+                    <option value="Delivery" class="select-item">Delivery</option>
+                    <option value="pickup" class="select-item">Pickup</option>
+                </select>
+                <select name="delivery" id="" class="form-select form-input-wt-shadow delivery">
+                    <option value="Delivery" class="form-select">same day</option>
+                    <option value="pickup" class="form-select">tomorrow</option>
+                </select>
+                <select name="delivery" id="" class="form-select form-input-wt-shadow type">
+                    <option value="Delivery" class="form-select">Kitchen</option>
+                    <option value="pickup" class="form-select">Resturant</option>
+                </select>
+            </div>
+            <div class="side-items">
+                <div class="icon user">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="icon heart">
+                    <i class="fa fa-heart"></i>
+                </div>
+                <div class="icon shopping-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+                <div class="icon bars" id="restuarants-drop-down-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <div class="drop-down-modal-container" >
+            <div class="restuarants-drop-down">
+                <a href="#" class="nav">My Profile</a>
+                <a href="" class="nav">My Orders</a>
+                <a href="" class="nav">Vouchers</a>
+                <a href="" class="nav">Payment Details</a>
+                <a href="" class="nav">Locations</a>
+                <a href="" class="nav">Notifications</a>
+                <a href="" class="nav">Logout</a>
+            </div>
+        </div>
+
+    </header>
+</body>
+
+</html>
+<script src="../js/secondHeader.js"></script>

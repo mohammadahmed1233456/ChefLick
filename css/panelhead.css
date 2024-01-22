@@ -1,0 +1,98 @@
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100vw;
+    overflow-x: hidden;
+}
+body {
+        font-family: "Lato", sans-serif;
+        padding:0px;
+    }
+  .container-width-pan{
+      border:0px solid;
+      background: #9c3dfd;
+  }
+  .openbtn {
+      font-size: 20px;
+      cursor: pointer;
+      background-color: #fff !important;
+      color: #9c3dfd !important;
+      padding: 10px 15px;
+      border: none;
+  }
+  .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #9c3dfd;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+  }
+  .sidebar a {
+      padding: 20px 30px 20px 30px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+      border: 0px solid;
+      margin: 15px;
+      background: #7e00ffc9;
+  }
+  .sidebar>a:hover{
+      background: #770fe1c9;
+  }
+  
+  .sidebar .closebtn {
+      background:none;
+      border:none;
+      margin-bottom:10px;
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      padding: 0px 15px !important;
+      margin: 15px -10px 0px 0px !important;
+      border: 0px solid;
+      background: #7e00ffc9;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }

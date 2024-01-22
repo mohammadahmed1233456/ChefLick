@@ -1,0 +1,838 @@
+@import "variables";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+
+    .side-nav {
+        padding: 64px 32px;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 20%;
+        max-width: 384px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 64px;
+        background: #001746;
+        border-radius: 0px 40px 40px 0px;
+        border-right: 8px solid #7618D6;
+
+        img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+            color: white;
+
+            .link {
+                text-align: left;
+                font: normal normal bold 20px/28px $font-family;
+                letter-spacing: 0.4px;
+                color: #FFFFFF;
+                text-decoration: none;
+                text-transform: uppercase;
+                opacity: 1;
+
+                &.active {
+                    color: #7618D6;
+                }
+            }
+        }
+    }
+
+
+
+    main {
+        right: 0;
+        padding: 64px 80px;
+        height: 100vh;
+        overflow: scroll;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1920px;
+            margin: 0px auto 56px auto;
+
+            .page-title {
+                text-align: left;
+                font: normal normal bold 42px/50px $font-family;
+                letter-spacing: 0px;
+                color: #001746;
+                opacity: 1;
+            }
+
+            .drop-down {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                position: relative;
+
+                .avatar {
+                    width: 49px;
+                    height: 49px;
+                    border: 4px solid #9C3DFD;
+                    opacity: 1;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                .user {
+                    text-align: left;
+                    font: normal normal bold 18px/22px $font-family;
+                    letter-spacing: 0px;
+                    color: #001746;
+                    opacity: 1;
+                }
+
+                i {
+                    font-size: 16px;
+                    color: #001746;
+                    cursor: pointer;
+                }
+
+                .drop-down-menu {
+                    position: absolute;
+                    right: 0px;
+                    top: 120%;
+                    width: 200px;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    box-shadow: 0px 4px 8px #00000029;
+                    display: none;
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    .nav {
+                        padding: 12px 16px;
+                        font: normal normal 500 16px $font-family;
+                        cursor: pointer;
+                        transition: all 200ms ease-in-out;
+                        text-decoration: none;
+                        color: #001746;
+
+                        &:first-child {
+                            border-radius: 8px 8px 0px 0px;
+                        }
+
+                        &:last-child {
+                            border-radius: 0px 0px 8px 8px;
+                        }
+
+                        &:hover {
+                            background-color: #c59bf0;
+                            color: white;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        .widgets {
+            display: flex;
+            gap: 32px;
+            width: 100%;
+            max-width: 1920px;
+            margin: 0px auto 56px auto;
+
+            .widget {
+                flex: 1;
+                padding: 32px 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 4px 8px #00000029;
+                border-radius: 15px;
+                opacity: 1;
+
+                .data {
+                    text-align: center;
+                    font: normal normal bold 67px/65px $font-family;
+                    letter-spacing: 0px;
+                    color: #7618D6;
+                    opacity: 1;
+                    text-transform: capitalize;
+
+                    span {
+                        text-align: center;
+                        font: normal normal bold 30px/30px $font-family;
+                        letter-spacing: 0px;
+                        color: #001746;
+                        opacity: 1;
+                    }
+                }
+
+                .name {
+                    text-align: center;
+                    font: normal normal 500 14px/17px $font-family;
+                    letter-spacing: 0px;
+                    color: #001746;
+                    opacity: 1;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        .section-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1920px;
+            margin: 0px auto 56px auto;
+
+            .title {
+                text-align: left;
+                font: normal normal bold 24px/29px $font-family;
+                text-transform: capitalize;
+                letter-spacing: 0px;
+                color: #001746;
+                opacity: 1;
+                margin-bottom: 24px;
+            }
+
+            .overview-link-container {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 24px 32px;
+                box-shadow: 0px 8px 16px #C6C3E391;
+                border-radius: 16px;
+
+                .link-text {
+                    text-align: left;
+                    font: normal normal bold 20px/24px $font-family;
+                    letter-spacing: 0px;
+                    color: #B6B7B7;
+                    opacity: 1;
+                }
+
+                i {
+                    position: relative;
+                    color: #9C3DFD;
+                    font-size: 21px;
+                    cursor: pointer;
+                }
+
+                .copied-message {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    color: #7618D6;
+                    font: normal normal normal 16px/24px $font-family;
+                    border-radius: 4px;
+                    right: 32px;
+                    top: 0px;
+                    display: none;
+
+                    i {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .table-pills {
+                display: flex;
+                gap: 48px;
+                padding-bottom: 16px;
+                border-bottom: 2px solid #E1E1E1;
+                margin-bottom: 32px;
+
+                .pill {
+                    text-align: left;
+                    font: normal normal bold 20px/24px $font-family;
+                    letter-spacing: 0px;
+                    color: #001746;
+                    opacity: 1;
+                    cursor: pointer;
+
+                    &.active {
+                        color: #9C3DFD;
+                    }
+                }
+
+            }
+
+            .table {
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 8px 16px #C6C3E391;
+                width: 100%;
+                border-radius: 16px;
+                opacity: 1;
+                padding: 32px;
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .table-row {
+                    display: flex;
+                    padding: 24px;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid #A4A4A4;
+                    border-radius: 9px;
+
+                    .td-name {
+                        text-align: left;
+                        font: normal normal bold 24px/29px $font-family;
+                        letter-spacing: 0px;
+                        color: #001746;
+                        opacity: 1;
+                    }
+
+                    .td-time {
+                        text-align: left;
+                        font: normal normal normal 14px/13px $font-family;
+                        letter-spacing: 0px;
+                        color: #7C7D7E;
+                        opacity: 1;
+                    }
+
+                    .td-status {
+                        text-align: left;
+                        font: normal normal normal 18px/13px $font-family;
+                        letter-spacing: 0px;
+                        color: #9C3DFD;
+                        opacity: 1;
+                    }
+
+                    .td-money {
+                        text-align: right;
+                        font: normal normal bold 24px/29px $font-family;
+                        letter-spacing: 0px;
+                        color: #001746;
+                        opacity: 1;
+                    }
+                }
+
+                .tableNavigators {
+                    display: flex;
+                    gap: 24px;
+                    align-items: center;
+                    font: normal normal 500 18px $font-family;
+                    color: #7C7D7E;
+                    align-self: flex-end;
+
+                    i {
+                        font-size: 24px;
+                        color: #9C3DFD;
+                    }
+                }
+            }
+        }
+
+        .registrations-table-container {
+            .table {
+                padding: 0px !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .withdraw-btn {
+            background: #9C3DFD 0% 0% no-repeat padding-box;
+            border-radius: 17px;
+            opacity: 1;
+            padding: 26px 0px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            max-width: 1920px;
+            margin: 0px auto 56px auto;
+            // font style
+            text-align: center;
+            font: normal normal bold 18px/22px $font-family;
+            letter-spacing: 0.36px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+
+            .avatar-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+                .avatar {
+                    width: 152px;
+                    height: 152px;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 100%;
+                    }
+                }
+
+                .data {
+                    text-align: center;
+                    font: normal normal bold 67px/65px $font-family;
+                    letter-spacing: 0px;
+                    color: #7618D6;
+                    opacity: 1;
+                    text-transform: capitalize;
+
+                    span {
+                        text-align: center;
+                        font: normal normal bold 30px/30px $font-family;
+                        letter-spacing: 0px;
+                        color: #001746;
+                        opacity: 1;
+                    }
+                }
+
+                .name {
+                    text-align: center;
+                    font: normal normal bold 32px/38px $font-family;
+                    letter-spacing: 0px;
+                    color: #001746;
+                    opacity: 1;
+                }
+            }
+
+            // change to get as in xd
+            .form-container {
+                padding: 0px;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .dashboard-container {
+        .side-nav {
+            padding: 56px 24px;
+            gap: 64px;
+            border-right: 6px solid #7618D6;
+
+            img {
+                height: 30px;
+            }
+
+            .nav-links {
+                gap: 24px;
+
+                .link {
+                    font: normal normal bold 16px/28px $font-family;
+                }
+            }
+        }
+
+        main {
+            padding: 40px 64px;
+
+            .top {
+                .page-title {
+                    font: normal normal bold 34px/42px $font-family;
+                }
+
+                .drop-down {
+                    position: relative;
+
+                    .avatar {
+                        width: 40px;
+                        height: 40px;
+                        border: 3px solid #9C3DFD;
+                    }
+
+                    .user {
+                        font: normal normal bold 16px/22px $font-family;
+                    }
+
+                    i {
+                        font-size: 14px;
+                    }
+                }
+
+
+            }
+
+            .widgets {
+                gap: 24px;
+
+                .widget {
+
+                    .data {
+                        font: normal normal bold 48px/46px $font-family;
+
+                        span {
+                            font: normal normal bold 20px/12px $font-family;
+                        }
+                    }
+
+                    .name {
+                        font: normal normal 500 14px/17px $font-family;
+                    }
+                }
+            }
+
+            .section-container {
+
+                .title {
+                    font: normal normal bold 22px/27px $font-family;
+                    margin-bottom: 16px;
+                }
+
+                .table {
+                    padding: 24px;
+                    gap: 24px;
+
+                    .table-row {
+
+                        .td-name {
+                            font: normal normal bold 22px/27px $font-family;
+                        }
+
+                        .td-time {
+                            font: normal normal normal 12px/11px $font-family;
+                        }
+
+                        .td-status {
+                            font: normal normal normal 16px/12px $font-family;
+                        }
+
+                        .td-money {
+                            font: normal normal bold 22px/27px $font-family;
+                        }
+                    }
+                }
+            }
+
+            .withdraw-btn {
+                padding: 24px 0px;
+                // font style
+                font: normal normal bold 16px/20px $font-family;
+            }
+
+            .profile-container {
+                gap: 40px;
+
+                .avatar-container {
+                    gap: 16px;
+
+                    .avatar {
+                        width: 120px;
+                        height: 120px;
+                    }
+
+                    .name {
+                        font: normal normal bold 24px/30px $font-family;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .dashboard-container {
+        .side-nav {
+            padding: 48px 16px;
+            gap: 40px;
+            border-right: 4px solid #7618D6;
+
+            img {
+                height: 25px;
+            }
+
+            .nav-links {
+                gap: 12px;
+
+                .link {
+                    font: normal normal bold 12px/28px $font-family;
+                }
+            }
+        }
+
+        main {
+            padding: 32px 48px;
+
+            .top {
+                margin-bottom: 40px;
+
+                .page-title {
+                    font: normal normal bold 32px/40px $font-family;
+                }
+
+                .drop-down {
+                    gap: 8px;
+
+                    .avatar {
+                        width: 32px;
+                        height: 32px;
+                        border: 2px solid #9C3DFD;
+                    }
+
+                    .user {
+                        font: normal normal bold 12px/18px $font-family;
+                    }
+
+                    i {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .widgets {
+                gap: 24px;
+                margin-bottom: 40px;
+
+                .widget {
+                    .data {
+                        font: normal normal bold 36px/30px $font-family;
+
+                        span {
+                            font: normal normal bold 14px/12px $font-family;
+                        }
+                    }
+
+                    .name {
+                        font: normal normal 500 10px/15px $font-family;
+                    }
+                }
+            }
+
+            .section-container {
+                margin-bottom: 24px;
+
+                .title {
+                    font: normal normal bold 18px/23px $font-family;
+                    margin-bottom: 12px;
+                }
+
+                .table {
+                    padding: 16px;
+                    gap: 16px;
+
+                    .table-row {
+                        padding: 16px;
+
+                        .td-name {
+                            font: normal normal bold 18px/23px $font-family;
+                        }
+
+                        .td-time {
+                            font: normal normal normal 10px/9px $font-family;
+                        }
+
+                        .td-status {
+                            font: normal normal normal 14px/10px $font-family;
+                        }
+
+                        .td-money {
+                            font: normal normal bold 18px/23px $font-family;
+                        }
+                    }
+                }
+            }
+
+            .withdraw-btn {
+                padding: 16px 0px;
+                // font style
+                font: normal normal bold 14px/18px $font-family;
+                margin-bottom: 0px;
+            }
+
+            .profile-container {
+                gap: 32px;
+
+                .avatar-container {
+                    gap: 16px;
+
+                    .avatar {
+                        width: 88px;
+                        height: 88px;
+                    }
+
+                    .name {
+                        font: normal normal bold 18px/24px $font-family;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .dashboard-container {
+        .side-nav {
+            padding: 40px 12px;
+            gap: 32px;
+            border-right: 3px solid #7618D6;
+
+            img {
+                height: 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+
+                .link {
+                    font: normal normal 500 10px/14px $font-family;
+                }
+            }
+        }
+
+        main {
+            padding: 32px 32px;
+
+            .top {
+                margin-bottom: 24px;
+
+                .page-title {
+                    font: normal normal bold 24px/32px $font-family;
+                }
+
+                .drop-down {
+                    gap: 4px;
+
+                    .avatar {
+                        width: 24px;
+                        height: 24px;
+                        border: 2px solid #9C3DFD;
+                    }
+
+                    .user {
+                        font: normal normal bold 10px/18px $font-family;
+                    }
+
+                    i {
+                        font-size: 8px;
+                    }
+                }
+            }
+
+            .widgets {
+                gap: 16px;
+                margin-bottom: 32px;
+
+                .widget {
+                    padding: 24px 0px;
+                    border-radius: 8px;
+
+                    .data {
+                        font: normal normal bold 26px/18px $font-family;
+
+                        span {
+                            font: normal normal bold 12px/10px $font-family;
+                        }
+                    }
+
+                    .name {
+                        font: normal normal 500 8px/13px $font-family;
+                    }
+                }
+            }
+
+            .section-container {
+                margin-bottom: 24px;
+
+                .title {
+                    font: normal normal bold 16px/23px $font-family;
+                    margin-bottom: 12px;
+                }
+
+                .table {
+                    padding: 16px;
+                    gap: 16px;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px 8px #C6C3E391;
+
+                    .table-row {
+                        padding: 16px;
+                        border-radius: 8px;
+
+                        .td-name {
+                            font: normal normal bold 12px/17px $font-family;
+                        }
+
+                        .td-time {
+                            font: normal normal normal 8px/9px $font-family;
+                        }
+
+                        .td-status {
+                            font: normal normal normal 10px/8px $font-family;
+                        }
+
+                        .td-money {
+                            font: normal normal bold 12px/17px $font-family;
+                        }
+                    }
+                }
+            }
+
+            .withdraw-btn {
+                padding: 16px 0px;
+                // font style
+                font: normal normal bold 12px/16px $font-family;
+                margin-bottom: 0px;
+                border-radius: 8px;
+            }
+
+            .profile-container {
+                gap: 32px;
+
+                .avatar-container {
+                    gap: 8px;
+
+                    .avatar {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    .name {
+                        font: normal normal bold 16px/22px $font-family;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {}

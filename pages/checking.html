@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-select {
+            position: relative;
+            width: 200px;
+        }
+
+        .select-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .selected-option {
+            font-weight: bold;
+        }
+
+        .arrow-down {
+            width: 10px;
+            height: 10px;
+            border: solid black;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .options-container {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: #f1f1f1;
+            transition: display 0.2s ease-in-out;
+        }
+
+        .open {
+            display: block;
+        }
+
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .option-image {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .option-text {
+            font-weight: bold;
+        }
+
+        .nested-options {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom-select">
+        <div class="select-container">
+            <span class="selected-option">Select an option</span>
+            <i class="arrow-down"></i>
+        </div>
+        <div class="options-container">
+            <div class="option">
+                <img src="path/to/image.png" alt="Option 1" class="option-image">
+                <span class="option-text">Option 1</span>
+            </div>
+            <div class="option">
+                <img src="path/to/image.png" alt="Option 2" class="option-image">
+                <span class="option-text">Option 2</span>
+                <div class="nested-options">
+                    <div class="option">
+                        <img src="path/to/image.png" alt="Option 2.1" class="option-image">
+                        <span class="option-text">Option 2.1</span>
+                    </div>
+                    <div class="option">
+                        <img src="path/to/image.png" alt="Option 2.2" class="option-image">
+                        <span class="option-text">Option 2.2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="option">
+                <img src="path/to/image.png" alt="Option 3" class="option-image">
+                <span class="option-text">Option 3</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    // Get the necessary elements
+    const selectContainer = document.querySelector('.select-container');
+    const optionsContainer = document.querySelector('.options-container');
+    const options = document.querySelectorAll('.option');
+
+    // Toggle the options container when the select container is clicked
+    selectContainer.addEventListener('click', () => {
+        optionsContainer.classList.toggle('open');
+    });
+
+    // Handle option selection
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedOption = option.querySelector('.option-text').textContent;
+            const selectedOptionType = option.querySelector('.option-type').textContent;
+            selectContainer.querySelector('.selected-option').textContent = selectedOption;
+            selectContainer.querySelector('.selected-option-type').textContent = selectedOptionType;
+            optionsContainer.classList.remove('open');
+        });
+    });
+
+</script>
+
+</html>

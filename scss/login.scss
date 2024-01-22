@@ -1,0 +1,67 @@
+@import "variables";
+
+.login-page {
+    flex-wrap: nowrap !important;
+    gap: 40px !important;
+
+    .section-left {
+        .sub-title {
+            text-align: left;
+            font: normal normal bold 40px/48px $font-family;
+            letter-spacing: 0px;
+            color: #001746;
+            text-transform: uppercase;
+            opacity: 1;
+            margin-bottom: 16px;
+        }
+
+        .title {
+            text-align: left;
+            font: normal normal bold 74px/89px $font-family;
+            letter-spacing: 0px;
+            color: $main-color;
+            text-transform: uppercase;
+            opacity: 1;
+            margin-bottom: 24px;
+        }
+
+        p {
+            text-align: left;
+            font: normal normal normal 16px/24px $font-family;
+            letter-spacing: 0px;
+            color: #7C7D7E;
+            opacity: 1;
+            margin-bottom: 40px;
+        }
+    }
+
+    .section-right {
+        .social-signup {
+            .social-icons {
+                .icon-container {
+                    img {
+                        width: initial !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.field {
+    a {
+        text-align: right;
+        font: normal normal medium 18px/22px $font-family;
+        letter-spacing: 0px;
+        color: $main-color;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .login-page {
+        .section-left {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.reviews-main {
+    width: 100%;
+    position: relative;
+    max-width: 1280px;
+}
+
+.reviews-container {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    justify-content: center;
+    align-content: stretch;
+}
+
+
+
+
+
+.review-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0px 4px 8px #00000029;
+    border-radius: 15px;
+    padding: 24px;
+    transition: all 0.5s ease;
+}
+
+
+
+.review {
+    text-align: left;
+    font: normal normal normal 16px/24px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #7C7D7E;
+    opacity: 1;
+}
+
+.review-info {
+    display: flex;
+    gap: 56px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviewer-name {
+    text-align: left;
+    font: normal normal bold 21px/28px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #001746;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.review-stars-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stars {
+    display: flex;
+    gap: 8px;
+}
+
+.star {
+    font-size: 16px;
+    color: #ffbb00;
+}
+
+.number-of-people {
+    font: normal normal medium 12px/14px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #9C3DFD;
+    opacity: 1;
+}
+
+/* newreview css */
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px #00000029;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+
+.arrow-left {
+    top: 50%;
+    transform: translateY(-50%);
+
+
+
+}
+
+.arrow-right {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.arrow i {
+    padding: 0;
+    margin-top: 5px;
+    text-align: center;
+    color: #9C3DFD;
+}
+
+
+/* newreview css  end */
+
+.review-navigation {
+    display: flex;
+    gap: 24px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    background-color: #E5CCFF;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #9C3DFD;
+}
+
+@media only screen and (max-width: 1280px) {
+    .reviews-container {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    /* Show two reviews per row on smaller screens */
+    .review-container {
+        width: 50% !important;
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    /* Show one review per row on even smaller screens */
+    .review-container {
+        width: 100%;
+    }
+}

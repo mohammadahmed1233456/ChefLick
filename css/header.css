@@ -1,0 +1,392 @@
+@font-face {
+    font-family: "metropolis";
+    src: url("../assets/fonts/Metropolis/Metropolis-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "metropolis";
+    src: url("../assets/fonts/Metropolis/Metropolis-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "metropolis";
+    src: url("../assets/fonts/Metropolis/Metropolis-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body,
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "metropolis", sans-serif;
+}
+
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid #9C3DFD;
+}
+
+.top-bar {
+    background-color: #9C3DFD;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.close-top-bar {
+    position: absolute;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+    top: 5px;
+    right: 10px;
+}
+
+.signup-option {
+    /* from parent */
+    flex: 1;
+    /* own */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.question {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    margin-right: 16px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    color: #fff;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #FFBB00;
+    font-size: 18px;
+    font-size: normal;
+    font-style: normal;
+    font-variant: normal;
+}
+
+.suggestions {
+    /* from parent */
+    flex: 1;
+    /* own */
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.ctas {
+    /* from parent */
+    flex: 1;
+    /* own */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+}
+
+.lang-option,
+.login-option {
+    display: flex;
+    align-items: center;
+}
+
+.lang-option i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #FFBB00;
+}
+
+
+
+.lang-option a,
+.login-option a {
+    color: #fff;
+    margin: 0;
+    padding: 0px;
+}
+
+.lang-option a:hover,
+.login-option a:hover {
+    color: hsl(0, 0%, 95%);
+}
+
+
+
+.login-option i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #FFBB00;
+}
+
+
+.bottom {
+    width: 100%;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+}
+
+.logo img {
+    height: auto;
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.nav-links.active {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(156, 61, 253, 0.9);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 24px;
+    z-index: 999;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0.5px;
+    color: #001746;
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 0px;
+    margin: 0px;
+    transition: color 300ms ease-in-out;
+}
+
+.nav-link:hover {
+    color: #9C3DFD;
+    text-decoration: none;
+}
+
+.active-link {
+    color: #9C3DFD;
+    text-decoration: none;
+}
+
+
+
+
+.fa-close:hover {
+    color: hsl(0, 0%, 95%);
+}
+
+.side-items {
+    display: flex;
+    gap: 24px;
+}
+
+.fa-shopping-cart,
+.fa-heart {
+    font-size: 24px;
+    color: #9C3DFD;
+}
+
+.toggle-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.close-mobile-nav {
+    font-size: 18px;
+    color: white;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1280px) {
+    .logo img {
+        height: auto;
+        width: 100px;
+    }
+
+    .question {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .question {
+        font-size: 12px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+
+    .nav-links {
+        gap: 24px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+
+    }
+
+}
+
+@media only screen and (max-width: 920px) {
+
+    .top-bar {
+        padding: 16px 32px;
+    }
+
+    .lang-option i,
+    .login-option i {
+        font-size: 14px;
+    }
+
+    .bottom {
+        padding: 16px 32px;
+    }
+
+    .logo img {
+        height: auto;
+        width: 75px;
+    }
+
+    .fa-heart,
+    .fa-shopping-cart {
+        font-size: 14px;
+    }
+
+    .question {
+        font-size: 10px;
+    }
+
+    a {
+        font-size: 10px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+
+    }
+
+}
+
+@media only screen and (max-width: 720px) {
+    .top-bar {
+        padding: 16px 24px;
+    }
+
+    .question {
+        margin-right: 8px;
+    }
+
+    .suggestions {
+        gap: 16px;
+        margin-right: -16px;
+    }
+
+    .ctas {
+        gap: 16px;
+    }
+
+    .bottom {
+        padding: 16px 24px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 0.5px;
+        color: #fff;
+        text-transform: uppercase;
+        opacity: 1;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 16px;
+    }
+
+    .nav-link:hover {
+        color: hsl(0, 0%, 95%);
+    }
+
+    .side-items {
+        display: none;
+    }
+
+    .toggle-icon {
+        display: block;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .top-bar {
+        gap: 12px;
+    }
+
+    .suggestions {
+        display: none;
+        /* in orde rot show them in a new row with both suggestions on sides */
+        flex: 100%;
+        order: 3;
+        justify-content: space-between;
+        margin: 0px;
+    }
+}

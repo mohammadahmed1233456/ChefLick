@@ -1,0 +1,381 @@
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+.hero {
+  width: 100%;
+  padding: 144px 104px;
+  background: url("../assets/images/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  gap: 144px;
+  justify-content: center;
+}
+.hero .hero-container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+}
+.hero .hero-container .section-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hero .hero-container .section-left .sub-title {
+  text-align: left;
+  font: normal normal bold 40px/48px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 16px;
+}
+.hero .hero-container .section-left .title {
+  text-align: left;
+  font: normal normal bold 74px/89px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #9C3DFD;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 32px;
+}
+.hero .hero-container .section-left .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+}
+.hero .hero-container .section-left .input-container label {
+  text-align: left;
+  font: normal normal normal 20px/24px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #B6B7B7;
+  opacity: 1;
+}
+.hero .hero-container .section-left .input-container .search-bar {
+  width: 100%;
+  position: relative;
+}
+.hero .hero-container .section-left .input-container .search-bar input {
+  padding: 24px 32px;
+  width: 100%;
+  border-radius: 64px;
+  text-align: left;
+  font: normal normal normal 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #6d6d6d;
+  opacity: 1;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+}
+.hero .hero-container .section-left .input-container .search-bar input::placeholder {
+  text-align: left;
+  font: normal normal normal 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #B6B7B7;
+  opacity: 1;
+  text-transform: capitalize;
+}
+.hero .hero-container .section-left .input-container .search-bar input:focus {
+  outline: 1px solid #9C3DFD;
+}
+.hero .hero-container .section-left .input-container .search-bar img {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero .hero-container .section-left .input-container .ctas {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
+}
+.hero .hero-container .section-left .input-container .ctas .hero-btn {
+  padding: 22px 70px;
+  background-color: #9C3DFD;
+  border-radius: 44px;
+  flex: 1;
+  border: none;
+  text-align: center;
+  font: normal normal normal 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0.36px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.hero .hero-container .section-left .cities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.hero .hero-container .section-left .cities-container .cities {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+}
+.hero .hero-container .section-left .cities-container .cities .city {
+  padding: 27px 40px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1607843137);
+  border: 2px solid #9C3DFD;
+  border-radius: 12px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.hero .hero-container .section-left .cities-container .cities .city .name {
+  text-align: center;
+  font: normal normal bold 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0.9px;
+  color: #001746;
+  text-transform: uppercase;
+}
+.hero .hero-container .section-left .cities-container .dots {
+  display: flex;
+  gap: 16px;
+}
+.hero .hero-container .section-left .cities-container .dots .dot {
+  width: 16px;
+  height: 16px;
+  background-color: #E5CCFF;
+}
+.hero .hero-container .section-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-container .section-right img {
+  width: 100%;
+}
+
+.become-cooking-star-banner {
+  width: 100%;
+  background-image: url(../assets/images/cooking-banner.png);
+}
+
+.processes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1280px;
+}
+.processes .process-box {
+  flex: calc(25% - 32px);
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 36px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.processes .process-box img {
+  height: 186px;
+}
+.processes .process-box .process-name {
+  text-align: center;
+  font: normal normal bold 21px/28px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.gallary-section {
+  background: linear-gradient(to bottom, #9C3DFD 25%, #FFFFFF 25%);
+  gap: 0px !important;
+}
+.gallary-section .title {
+  text-align: center;
+  font: normal normal bold 21px/25px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 24px;
+}
+.gallary-section .sub-title {
+  text-align: center;
+  font: normal normal bold 34px/41px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #FFBB00;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 64px;
+}
+.gallary-section .gallary {
+  width: 100%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 32px;
+}
+.gallary-section .gallary img {
+  width: 100%;
+}
+
+.benefits-section .page-name {
+  text-align: center !important;
+}
+.benefits-section .heading {
+  text-align: center !important;
+}
+.benefits-section .benefits {
+  width: 100%;
+  max-width: 1280px;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 56px;
+}
+.benefits-section .benefits .benefit {
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 36px;
+  opacity: 1;
+}
+.benefits-section .benefits .benefit .name {
+  text-align: center;
+  font: normal normal bold 21px/28px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1280px) {
+  .hero {
+    padding: 40px 32px;
+    margin: 0 auto;
+  }
+  .hero .hero-container .section-left {
+    width: 100%;
+  }
+  .hero .hero-container .section-right {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .processes .process-box {
+    flex: calc(50% - 32px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero .hero-container .section-left .sub-title {
+    font: normal normal bold 24px/32px "metropolis", sans-serif;
+    margin-bottom: 12px;
+  }
+  .hero .hero-container .section-left .title {
+    font: normal normal bold 40px/55px "metropolis", sans-serif;
+    margin-bottom: 24px;
+  }
+  .hero .hero-container .section-left .input-container {
+    gap: 16px;
+    width: 100%;
+  }
+  .hero .hero-container .section-left .input-container label {
+    text-align: left;
+    font: normal normal normal 14px/18px "metropolis", sans-serif;
+  }
+  .hero .hero-container .section-left .input-container .search-bar {
+    width: 100%;
+    position: relative;
+  }
+  .hero .hero-container .section-left .input-container .search-bar input {
+    padding: 16px 24px;
+    border-radius: 48px;
+    text-align: left;
+    font: normal normal normal 12px/18px "metropolis", sans-serif;
+  }
+  .hero .hero-container .section-left .input-container .search-bar input::placeholder {
+    font: normal normal normal 12px/18px "metropolis", sans-serif;
+  }
+  .hero .hero-container .section-left .input-container .search-bar img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero .hero-container .section-left .input-container .ctas {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .hero .hero-container .section-left .input-container .ctas .hero-btn {
+    padding: 16px 40px;
+    white-space: nowrap;
+    font: normal normal normal 16px/20px "metropolis", sans-serif;
+  }
+  .hero .hero-container .section-left .cities-container {
+    gap: 16px;
+    width: 100%;
+  }
+  .hero .hero-container .section-left .cities-container .cities {
+    gap: 16px;
+    margin-top: 24px;
+    width: 100%;
+    overflow: scroll;
+  }
+  .hero .hero-container .section-left .cities-container .cities .city {
+    padding: 14px 32px;
+    gap: 16px;
+  }
+  .hero .hero-container .section-left .cities-container .cities .city .name {
+    font: normal normal bold 14px/18px "metropolis", sans-serif;
+  }
+  .hero .hero-container .section-left .cities-container .dots {
+    display: flex;
+    gap: 12px;
+  }
+  .hero .hero-container .section-left .cities-container .dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #E5CCFF;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .processes .process-box {
+    flex: calc(100% - 32px);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

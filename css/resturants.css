@@ -1,0 +1,791 @@
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+.search-and-filters {
+  width: 100%;
+  max-width: 1424px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(3, minmax(448px, 1fr));
+  margin: 0 auto;
+  padding: 48px 0px 0px 0px;
+}
+.search-and-filters .search-food {
+  position: relative;
+}
+.search-and-filters .search-food .search-food-input {
+  padding: 20px 64px 20px 80px;
+  border: 1px solid #E1E1E1;
+  opacity: 1;
+  text-align: left;
+  font: normal normal normal 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #7C7D7E;
+  opacity: 1;
+  width: 100%;
+  text-transform: capitalize;
+  margin-bottom: 1px;
+}
+.search-and-filters .search-food .search-food-input:focus {
+  outline: 1px solid #7618D6;
+}
+.search-and-filters .search-food i {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-and-filters .search-food .fa-search {
+  left: 32px;
+  color: #7C7D7E;
+}
+.search-and-filters .search-food .fa-filter {
+  right: 32px;
+  color: #9C3DFD;
+  cursor: pointer;
+}
+.search-and-filters .search-food .search-suggestions-list {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  max-height: 584px;
+  z-index: 10;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  border: 1px solid #E1E1E1;
+  display: none;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.search-and-filters .search-food .search-suggestions-list::-webkit-scrollbar {
+  width: 8px;
+}
+.search-and-filters .search-food .search-suggestions-list::-webkit-scrollbar-track {
+  background: #E9E9E9;
+}
+.search-and-filters .search-food .search-suggestions-list::-webkit-scrollbar-thumb {
+  background: #9C3DFD;
+}
+.search-and-filters .search-food .search-suggestions-list::-webkit-scrollbar-thumb:hover {
+  background: #6902d2;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid #E1E1E1;
+  padding: 16px 0px;
+  cursor: pointer;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion:hover img {
+  box-shadow: 0px 2px 4px #001746;
+  border-radius: 16px;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion img {
+  height: 80px;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .name-and-d-k,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .t-n-and-rating,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .time-and-location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .name-and-d-k h6,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .t-n-and-rating h6,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .time-and-location h6 {
+  font: normal normal bold 18px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  opacity: 1;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .name-and-d-k p,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .t-n-and-rating p,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .time-and-location p {
+  font: normal normal normal 16px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #7C7D7E;
+  opacity: 1;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .name-and-d-k i,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .t-n-and-rating i,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .time-and-location i {
+  position: relative;
+  color: #FFBB00;
+  font-size: 10px;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .name-and-d-k .rating,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .t-n-and-rating .rating,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .time-and-location .rating {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .name-and-d-k .rating i,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .t-n-and-rating .rating i,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .time-and-location .rating i {
+  position: relative;
+  color: #FFBB00;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .name-and-d-k .rating p,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .t-n-and-rating .rating p,
+.search-and-filters .search-food .search-suggestions-list .suggestion .info .time-and-location .rating p {
+  font: normal normal normal 16px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #7C7D7E;
+  opacity: 1;
+}
+.search-and-filters .search-food .filters {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  gap: 0px;
+  max-height: 584px;
+  z-index: 10;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  border: 1px solid #E1E1E1;
+  list-style-type: none;
+  display: none;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.search-and-filters .search-food .filters::-webkit-scrollbar {
+  width: 8px;
+}
+.search-and-filters .search-food .filters::-webkit-scrollbar-track {
+  background: #E9E9E9;
+}
+.search-and-filters .search-food .filters::-webkit-scrollbar-thumb {
+  background: #9C3DFD;
+}
+.search-and-filters .search-food .filters::-webkit-scrollbar-thumb:hover {
+  background: #6902d2;
+}
+.search-and-filters .search-food .filters li {
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 16px 0px;
+}
+.search-and-filters .search-food .filters .filter {
+  padding: 16px 16px;
+  text-align: left;
+  font: normal normal normal 16px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #7C7D7E;
+  opacity: 1;
+  text-transform: capitalize;
+}
+.search-and-filters .search-food .filters .filter label {
+  pointer-events: none;
+}
+.search-and-filters .search-food .filters .name {
+  text-align: left;
+  font: normal normal bold 16px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  opacity: 1;
+  list-style-type: none;
+}
+.search-and-filters .search-food .open {
+  display: flex;
+}
+.search-and-filters .categories {
+  position: relative;
+}
+.search-and-filters .categories input {
+  padding: 20px 72px 20px 24px;
+  border: 1px solid #E1E1E1;
+  opacity: 1;
+  text-align: left;
+  font: normal normal normal 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #7C7D7E;
+  opacity: 1;
+  width: 100%;
+  text-transform: capitalize;
+  margin-bottom: 1px;
+}
+.search-and-filters .categories input:focus {
+  outline: 1px solid #7618D6;
+}
+.search-and-filters .categories i {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  color: #001746;
+  cursor: pointer;
+}
+.search-and-filters .categories .options {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  border: 1px solid #E1E1E1;
+  list-style-type: none;
+  display: none;
+  transition: display 300ms ease-in-out;
+}
+.search-and-filters .categories .options .option-1 {
+  width: inherit;
+  position: relative;
+  padding: 16px 24px;
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  font: normal normal bold 16px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  opacity: 1;
+  cursor: pointer;
+}
+.search-and-filters .categories .options .option-1 .nested-options {
+  position: absolute;
+  top: -1px;
+  left: calc(100% + 22px);
+  width: inherit;
+  padding: 0px 20px;
+  background-color: white;
+  z-index: 10;
+  border: 1px solid #E1E1E1;
+  display: none;
+}
+.search-and-filters .categories .options .option-1 .nested-options .option {
+  width: inherit;
+  position: relative;
+  padding: 16px 24px;
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  font: normal normal bold 16px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  opacity: 1;
+  cursor: pointer;
+}
+.search-and-filters .categories .options .option-1 .open-nested {
+  display: block;
+}
+.search-and-filters .categories .open {
+  display: flex;
+}
+
+.resturant-container {
+  gap: 80px !important;
+}
+
+.resturant-page-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 1424px;
+}
+.resturant-page-section .title {
+  text-align: left;
+  font: normal normal bold 34px/41px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  opacity: 1;
+}
+.resturant-page-section .offers-container {
+  position: relative;
+  width: 100%;
+}
+.resturant-page-section .offers-container .offers-list {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+.resturant-page-section .offers-container .offers-list .offer {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 12px;
+  width: 100%;
+}
+.resturant-page-section .offers-container .offers-list .offer:nth-child(1) {
+  background-image: linear-gradient(to right, #9C3DFD, #1C0039);
+}
+.resturant-page-section .offers-container .offers-list .offer:nth-child(2) {
+  background-image: linear-gradient(to right, #FD3D43, #390000);
+}
+.resturant-page-section .offers-container .offers-list .offer:nth-child(3) {
+  background-image: linear-gradient(to right, #004CE5, #000A48);
+}
+.resturant-page-section .offers-container .offers-list .offer .offer-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.resturant-page-section .offers-container .offers-list .offer .offer-info .offer-name {
+  text-align: left;
+  font: normal normal bold 24px/29px "metropolis", sans-serif;
+  position: relative;
+  left: 16px;
+}
+.resturant-page-section .offers-container .offers-list .offer .offer-info .offer-name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -16px;
+  top: -10%;
+  width: 6px;
+  height: 120%;
+  background-color: #FFBB00;
+}
+.resturant-page-section .offers-container .offers-list .offer .offer-info .moto {
+  text-align: left;
+  font: normal normal normal 18px/24px "metropolis", sans-serif;
+}
+.resturant-page-section .offers-container .offers-list .offer .offer-info .link {
+  text-align: left;
+  font: normal normal 500 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #FFBB00;
+}
+.resturant-page-section .offers-container .arrow {
+  position: absolute;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1607843137);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: #9C3DFD;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.resturant-page-section .offers-container .arrow .fa-chevron-left,
+.resturant-page-section .offers-container .arrow .fa-chevron-right {
+  color: white;
+}
+.resturant-page-section .offers-container .prev-arrow {
+  left: -24px;
+}
+.resturant-page-section .offers-container .next-arrow {
+  right: -24px;
+}
+.resturant-page-section .banners {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+.resturant-page-section .banners .banner {
+  flex: 1;
+  position: relative;
+  min-height: 265px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  border-radius: 12px;
+  padding: 24px 16px;
+  overflow: hidden;
+  background: url("../assets/images/resturant-banner.png") no-repeat;
+  background-size: cover;
+}
+.resturant-page-section .banners .banner::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 23, 70, 0), #1C0039);
+  opacity: 1;
+  z-index: 1;
+}
+.resturant-page-section .banners .banner .title {
+  text-align: left;
+  font: normal normal bold 24px/29px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: white;
+  opacity: 100;
+  margin-bottom: 9px;
+  z-index: 2;
+}
+.resturant-page-section .banners .banner .info {
+  text-align: left;
+  font: normal normal normal 18px/24px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #B6B7B7;
+  z-index: 2;
+}
+.resturant-page-section .resturants-container {
+  position: relative;
+  width: 100%;
+}
+.resturant-page-section .resturants-container .pill-container {
+  height: 100%;
+  background-color: #D2FFDD;
+  display: flex;
+  gap: 6px;
+  border-radius: 20px;
+  justify-content: center;
+  padding: 8px 12px;
+  align-items: center;
+}
+.resturant-page-section .resturants-container .pill-container i {
+  color: #098000;
+  font-size: 16px;
+}
+.resturant-page-section .resturants-container .pill-container p {
+  font: normal normal medium 10px/12px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #7C7D7E;
+  opacity: 1;
+}
+.resturant-page-section .resturants-container .like {
+  background-color: #E1E1E1;
+  opacity: 0.73;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.resturant-page-section .resturants-container .like i {
+  color: #7618D6;
+  font-size: 14px;
+}
+.resturant-page-section .resturants-container .type-and-rating {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resturant-page-section .resturants-container .type-and-rating .type {
+  text-align: left;
+  font: normal normal normal 14px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #B6B7B7;
+  opacity: 1;
+}
+.resturant-page-section .resturants-container .type-and-rating .rating {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.resturant-page-section .resturants-container .type-and-rating .rating i {
+  font-size: 10px;
+  color: #FFBB00;
+}
+.resturant-page-section .resturants-container .type-and-rating .rating p {
+  text-align: left;
+  font: normal normal normal 14px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #9C3DFD;
+  opacity: 1;
+}
+.resturant-page-section .resturants-container .time-and-location {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: normal normal normal 14px/20px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #B6B7B7;
+  opacity: 1;
+}
+.resturant-page-section .resturants-container .resturants-list-row {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  /* hide horizontal scrollbar */
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant {
+  min-width: calc(20% - 20px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant .head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: url("../assets/images/pizza.png") no-repeat;
+  background-size: cover;
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant .head .unactive {
+  background: #f88282;
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant .head .unactive i {
+  color: red;
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant .head .head-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant .head .foot-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant .body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.resturant-page-section .resturants-container .resturants-list-row .resturant .body .title {
+  text-align: left;
+  font: normal normal bold 20px/24px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  opacity: 1;
+}
+.resturant-page-section .resturants-container .resturants-list-column {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+}
+.resturant-page-section .resturants-container .resturants-list-column .resturant {
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 16px rgba(198, 195, 227, 0.568627451);
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+.resturant-page-section .resturants-container .resturants-list-column .resturant img {
+  height: 189px;
+}
+.resturant-page-section .resturants-container .resturants-list-column .resturant .info {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.resturant-page-section .resturants-container .resturants-list-column .resturant .info .name-and-like {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resturant-page-section .resturants-container .resturants-list-column .resturant .info .name-and-like .name {
+  text-align: left;
+  font: normal normal bold 30px/36px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  opacity: 1;
+}
+.resturant-page-section .resturants-container .resturants-list-column .resturant .info .tags {
+  width: 100%;
+  gap: 16px;
+  display: flex;
+}
+.resturant-page-section .resturants-container .resturants-list-column .resturant .info .time-and-location {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+.resturant-page-section .resturants-container .scroll {
+  position: absolute;
+  top: 25%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1607843137);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: #9C3DFD;
+}
+.resturant-page-section .resturants-container .scroll i {
+  color: white;
+  pointer-events: none;
+}
+.resturant-page-section .resturants-container .scroll-left {
+  left: -24px;
+}
+.resturant-page-section .resturants-container .scroll-right {
+  right: -24px;
+}
+
+@media only screen and (max-width: 1424px) {
+  .search-and-filters {
+    padding: 48px 32px 0px 32px;
+    flex-wrap: wrap;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .search-and-filters {
+    padding: 48px 32px 0px 32px;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+  }
+  .resturant-page-section .resturants-container .resturants-list-row .resturant {
+    min-width: calc(25% - 18px);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .search-and-filters .search-food-input {
+    padding: 16px 264px;
+  }
+  .resturant-page-section .resturants-container .resturants-list-row .resturant {
+    min-width: calc(33% - 16px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .search-and-filters {
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .search-and-filters .search-food {
+    position: relative;
+  }
+  .search-and-filters .search-food .search-food-input {
+    padding: 16px 40px 16px 48px;
+    font: normal normal normal 16px/22px "metropolis", sans-serif;
+  }
+  .search-and-filters .search-food i {
+    font-size: 16px;
+  }
+  .search-and-filters .search-food .fa-search {
+    left: 16px;
+  }
+  .search-and-filters .search-food .fa-filter {
+    right: 16px;
+  }
+  .resturant-page-section .banners {
+    flex-direction: column;
+  }
+  .resturant-page-section .banners .banner {
+    width: 100%;
+  }
+  .resturant-page-section .banners .banner .title {
+    font: normal normal bold 24px/29px "metropolis", sans-serif;
+  }
+  .resturant-page-section .banners .banner .info {
+    font: normal normal normal 18px/24px "metropolis", sans-serif;
+  }
+  .resturant-page-section .resturants-container .resturants-list-row .resturant {
+    min-width: calc(50% - 12px);
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant {
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    box-shadow: 0px 4px 8px rgba(198, 195, 227, 0.568627451);
+    border-radius: 16px;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant img {
+    height: 189px;
+    width: 40%;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant .info {
+    gap: 8px;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant .info .name-and-like .name {
+    font: normal normal bold 20px/36px "metropolis", sans-serif;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant .info .tags {
+    gap: 8px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .resturant-page-section .resturants-container .resturants-list-row .resturant {
+    min-width: 100%;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant {
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant img {
+    height: 200px;
+    width: 100%;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant .info {
+    gap: 16px;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant .info .name-and-like .name {
+    font: normal normal bold 20px/36px "metropolis", sans-serif;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant .info .tags {
+    gap: 16px;
+  }
+  .resturant-page-section .resturants-container .resturants-list-column .resturant .info .time-and-location {
+    position: relative;
+  }
+}
+
+/*# sourceMappingURL=resturants.css.map */

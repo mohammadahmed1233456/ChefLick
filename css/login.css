@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("../assets/fonts/Metropolis/Metropolis-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+.login-page {
+  flex-wrap: nowrap !important;
+  gap: 40px !important;
+}
+.login-page .section-left .sub-title {
+  text-align: left;
+  font: normal normal bold 40px/48px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #001746;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 16px;
+}
+.login-page .section-left .title {
+  text-align: left;
+  font: normal normal bold 74px/89px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #9C3DFD;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-bottom: 24px;
+}
+.login-page .section-left p {
+  text-align: left;
+  font: normal normal normal 16px/24px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #7C7D7E;
+  opacity: 1;
+  margin-bottom: 40px;
+}
+.login-page .section-right .social-signup .social-icons .icon-container img {
+  width: initial !important;
+}
+
+.field a {
+  text-align: right;
+  font: normal normal medium 18px/22px "metropolis", sans-serif;
+  letter-spacing: 0px;
+  color: #9C3DFD;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 992px) {
+  .login-page .section-left {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

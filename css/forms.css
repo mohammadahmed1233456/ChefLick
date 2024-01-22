@@ -1,0 +1,452 @@
+.form-container {
+    position: relative;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    padding: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 8px #00000052;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.forget-password-form {
+    max-width: 574px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    padding: 0;
+    margin: 0px -32px 0px 0px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.otp-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    margin-right: 32px;
+
+}
+
+.message {
+    flex: 100%;
+    text-align: left;
+    font: normal normal normal 18px/22px "metropolis", sans-serif;
+    color: #001746;
+    padding: 32px 0px 0px 0px;
+    opacity: 1;
+    color: red;
+}
+
+.checkbox-field {
+    flex-direction: row !important;
+    align-items: flex-start;
+
+}
+
+
+.form-label {
+    text-align: left;
+    font: normal normal normal 18px/22px "metropolis", sans-serif;
+    color: #001746;
+    opacity: 1;
+    text-transform: capitalize;
+}
+
+
+
+.form-input {
+    width: 100%;
+    flex: 1;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px #C6C3E391;
+    border-radius: 16px;
+    opacity: 1;
+    border: none;
+    padding: 24px 32px;
+    /* font styling */
+    text-align: left;
+    font: normal normal normal 18px/22px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    opacity: 1;
+
+}
+
+.otp-input {
+    flex: 1;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px #C6C3E391;
+    border-radius: 16px;
+    opacity: 1;
+    border: none;
+    width: 72px;
+    height: 72px;
+    /* font styling */
+    padding: 0px;
+    text-align: center;
+    flex: none;
+    font: normal normal normal 32px/38px "metropolis", sans-serif;
+}
+
+.otp-field {
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+.form-checkbox {
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 18px;
+    height: 18px;
+}
+
+
+.form-input:focus {
+    outline: 2px solid #9C3DFD;
+}
+
+.otp-input:focus {
+    outline: 2px solid #9C3DFD;
+}
+
+.form-input::placeholder {
+    text-align: left;
+    font: normal normal normal 18px/22px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #B6B7B7;
+    opacity: 1;
+}
+
+.otp-input::placeholder {
+    color: #B6B7B7;
+    opacity: 1;
+}
+
+.form-btn {
+    background: #9C3DFD 0% 0% no-repeat padding-box;
+    border-radius: 17px;
+    opacity: 1;
+    padding: 24px;
+    cursor: pointer;
+    border: none;
+    /* font styling */
+    text-align: center;
+    font: normal normal bold 18px/22px "metropolis", sans-serif;
+    letter-spacing: 0.36px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.social-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.signup-question {
+    padding: 0;
+    margin: 0;
+    font: normal normal medium 18px/22px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #001746;
+    opacity: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 32px;
+}
+
+.icon-container {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #8B89A16E;
+    border-radius: 16px;
+    opacity: 1;
+}
+
+.info-text {
+    text-align: center;
+    font: normal normal 500 16px/24px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #001746;
+    opacity: 1;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #9C3DFD;
+    font-size: 18px;
+}
+
+
+
+.agreement-footer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.page-foot {
+    padding-bottom: 32px;
+}
+
+.form-foot-message {
+    font-family: "metropolis", sans-serif;
+    opacity: 1;
+}
+
+.form-foot-options {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-foot-options a {
+    color: #9C3DFD;
+    text-align: center;
+    font: normal normal medium 16px/19px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #9C3DFD;
+    opacity: 1;
+}
+
+.head-message {
+    text-align: center;
+    font: normal normal normal 16px/24px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    color: #7C7D7E;
+    opacity: 1;
+    margin-top: -32px;
+    margin-bottom: 24px;
+}
+
+.resend-otp-messsage {
+    text-align: center;
+    font: normal normal 500 18px/22px "metropolis", sans-serif;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+.resend-otp-messsage span {
+    color: #9C3DFD;
+    cursor: pointer;
+}
+
+/* 
+
+@media only screen and (max-width: 920px) {
+
+
+    .form-container {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .form-input {
+        min-width: 100%;
+    }
+
+    /* .row {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px;
+        margin: 0px;
+
+    }
+
+    .field {
+        margin-right: 0px;
+    } */
+
+/*}  */
+
+@media only screen and (max-width: 720px) {
+    .row {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px;
+        margin: 0px;
+        align-items: stretch;
+    }
+
+    .field {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    .form-container {
+        gap: 24px;
+    }
+
+    .form {
+        gap: 24px;
+    }
+
+    .inputs {
+        gap: 24px;
+    }
+
+    .otp-input {
+        box-shadow: 0px 4px 8px #C6C3E391;
+        border-radius: 12px;
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .row {
+        gap: 24px;
+    }
+
+    .form-input {
+        min-width: 100%;
+        padding: 16px 24px;
+        box-shadow: 0px 4px 8px #C6C3E391;
+        border-radius: 8px;
+        /* font styling */
+        text-align: left;
+        font: normal normal normal 12px/16px "metropolis", sans-serif;
+        letter-spacing: 0px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .icon-container {
+        width: 100%;
+    }
+
+    .info-text {
+        font-size: 12px;
+    }
+
+    .form-btn {
+        border-radius: 12px;
+        padding: 16px;
+        font-size: 14px;
+    }
+
+
+
+    .form-foot-question {
+        font-size: 12px;
+    }
+
+    .form-foot-options {
+        gap: 16px;
+        flex-direction: column;
+    }
+
+
+    .form-foot-options a {
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    .container {
+        padding: 16px 24px;
+    }
+
+    .page-name {
+        font: normal normal bold 16px/22px "metropolis", sans-serif;
+    }
+
+    .heading {
+        font: normal normal bold 24px/31px "metropolis", sans-serif;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 16px;
+    }
+
+
+
+    .form-input:focus {
+        outline: 1px solid #9C3DFD;
+    }
+
+    .form-label {
+        font: normal normal normal 12px/16px "metropolis", sans-serif;
+    }
+
+    .row {
+        flex-direction: column;
+        margin: 0px;
+        justify-content: flex-start;
+        gap: 32px;
+
+    }
+
+    .field {
+        margin-right: 0px;
+    }
+
+    .otp-input {
+        box-shadow: 0px 4px 8px #C6C3E391;
+        border-radius: 8px;
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .page-foot {
+        bottom: 0;
+        position: absolute;
+    }
+
+    .form-foot-options {
+        flex-direction: column;
+    }
+}
